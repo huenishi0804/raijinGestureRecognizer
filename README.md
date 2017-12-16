@@ -1,0 +1,2 @@
+# raijinGestureRecognizer
+gestureRecognizerを練習するためのファイル
