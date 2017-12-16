@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBAction func tapRaijin(_ sender: UITapGestureRecognizer) {
+    //タップされた雷神
+        let raijin = sender.view!
+        let newX = arc4random_uniform(UInt32(view.frame.width))
+        let newY = arc4random_uniform(UInt32(view.frame.height))
+        raijin.center = CGPoint(x: Double(newX), y: Double(newY))
+    
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
