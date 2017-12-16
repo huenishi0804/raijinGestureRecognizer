@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var count: UILabel!
+    
+    var countnumber = 0
+    
+    
     @IBAction func tapRaijin(_ sender: UITapGestureRecognizer) {
     //タップされた雷神
         let raijin = sender.view!
@@ -17,6 +23,9 @@ class ViewController: UIViewController {
         let newY = arc4random_uniform(UInt32(view.frame.height))
         raijin.center = CGPoint(x: Double(newX), y: Double(newY))
     
+        countnumber = countnumber + 1
+        count.text = String(countnumber)
+        
     }
     
     
